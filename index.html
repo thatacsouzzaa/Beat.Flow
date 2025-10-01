@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beat Flow</title>
+    <link rel="stylesheet" href="estilo.css">
+</head>
+<body>
+    <nav role="navigation">
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <ul id="menu">
+                <li>
+                    <h3>Configurações</h3>
+                </li>
+                <li>
+                    <div class="server-input">
+                        <input id="serverUrl" type="url" placeholder="URL do servidor Flask (ex.: http://192.168.1.100:5000)" autocomplete="off" spellcheck="false" />
+                        <button id="connectBtn" type="button">Conectar</button>
+                    </div>
+                </li>
+                <li>
+                    <div id="status" aria-live="polite"></div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="logo">
+        <img src="img/logo3.png" alt="Beat Flow Logo">
+    </div>
+
+    <main>
+        <div class="player-container">
+            <div class="player">
+                <audio id="audio" controls preload="none"></audio>
+                <div id="nowPlaying" class="now-playing"></div>
+            </div>
+            
+            <div class="music-grid" id="musicGrid">
+                <div class="loading-message" id="loadingMessage">
+                    <div class="loading-spinner"></div>
+                    <p>Conecte-se ao servidor para ver suas músicas</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="app.js" defer></script>
+</body>
+</html>
